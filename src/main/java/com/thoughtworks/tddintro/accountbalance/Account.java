@@ -13,7 +13,10 @@ public class Account {
     }
 
     public int withdraw(int amount){
-        balance -= amount;
+        int newBalance = balance - amount;
+        if (newBalance > 0){
+            balance = newBalance;
+        }
         return balance;
     }
 }
